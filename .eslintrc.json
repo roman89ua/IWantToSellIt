@@ -10,13 +10,19 @@
     ],
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "modules": true,
+            "spread" : true,
+            "restParams" : true
         },
+        "sourceType": "module",
         "ecmaVersion": 12
     },
     "plugins": [
         "react"
     ],
     "rules": {
+        "no-unused-vars" : 2,
+        "no-undef" : 2
     }
 }

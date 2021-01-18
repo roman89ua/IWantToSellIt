@@ -1,13 +1,13 @@
 import React from "react";
-import { Image, StyleSheet, StatusBar, SafeAreaView, View } from "react-native";
+import { Image, StyleSheet, StatusBar, View } from "react-native";
 import colors from "../config/colors";
 
 const ViewImageScreen = () => {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
-      <View style={[styles.icons, styles.closeIcon]}></View>
-      <View style={[styles.icons, styles.deleteIcon]}></View>
+      <View style={[styles.icons, styles.closeIcon]} />
+      <View style={[styles.icons, styles.deleteIcon]} />
       <Image
         resizeMode="contain"
         source={require("../assets/chair.jpg")}
