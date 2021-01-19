@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     top: 40,
   },
   closeIcon: {
-    backgroundColor: colors.primaty,
+    backgroundColor: colors.primary,
     left: 30,
   },
   deleteIcon: {
