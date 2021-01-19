@@ -1,13 +1,22 @@
 import React from "react";
 import { Image, StyleSheet, StatusBar, View } from "react-native";
 import colors from "../config/colors";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const ViewImageScreen = () => {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
-      <View style={[styles.icons, styles.closeIcon]} />
-      <View style={[styles.icons, styles.deleteIcon]} />
+      <View style={[styles.icons, styles.closeIcon]}>
+        <MaterialCommunityIcons name="close" color="white" size={40} />
+      </View>
+      <View style={[styles.icons, styles.deleteIcon]}>
+        <MaterialCommunityIcons
+          name="trash-can-outline"
+          color="white"
+          size={40}
+        />
+      </View>
       <Image
         resizeMode="contain"
         source={require("../assets/chair.jpg")}
@@ -20,17 +29,13 @@ export default ViewImageScreen;
 
 const styles = StyleSheet.create({
   icons: {
-    width: 50,
-    height: 50,
     position: "absolute",
     top: 40,
   },
   closeIcon: {
-    backgroundColor: colors.primary,
     left: 30,
   },
   deleteIcon: {
-    backgroundColor: colors.secondary,
     right: 30,
   },
   container: {
