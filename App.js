@@ -1,23 +1,16 @@
 import React from "react";
-import Card from "./app/components/Card";
-import { StyleSheet, View } from "react-native";
+
+// import { StyleSheet } from "react-native";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Card
-        title="Red jeccket for sale"
-        price="$100"
-        image={require("./app/assets/clothes1.jpg")}
-      />
-    </View>
-  );
+  return <ListingDetailsScreen />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#f8f4f4",
-    padding: 20,
-    paddingTop: 100,
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     backgroundColor: "#f8f4f4",
+//     padding: 20,
+//     paddingTop: 100,
+//   },
+// });
