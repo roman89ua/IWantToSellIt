@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
-import AppButton from "../components/AppButton";
+import AppButton from "../components/AppButton/";
 
 const WelcomeScreen = () => {
   return (
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   },
   welcomeHeader: {
     fontSize: 18,
-    fontWeight: "600",
+    fontWeight: "bold",
     marginVertical: 10,
   },
 });

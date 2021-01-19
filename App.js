@@ -1,6 +1,23 @@
 import React from "react";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
+import Card from "./app/components/Card";
+import { StyleSheet, View } from "react-native";
 
 export default function App() {
-  return <WelcomeScreen />;
+  return (
+    <View style={styles.container}>
+      <Card
+        title="Red jeccket for sale"
+        price="$100"
+        image={require("./app/assets/clothes1.jpg")}
+      />
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#f8f4f4",
+    padding: 20,
+    paddingTop: 100,
+  },
+});
