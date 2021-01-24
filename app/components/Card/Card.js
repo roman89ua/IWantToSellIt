@@ -3,7 +3,7 @@ import { Image, StyleSheet, View } from "react-native";
 
 import PropTypes from "prop-types";
 import colors from "../../config/colors";
-import MainText from "../MainTextComponent";
+import MainText from "../MainText";
 
 const Card = ({ title, price, image }) => {
   return (
@@ -11,7 +11,7 @@ const Card = ({ title, price, image }) => {
       <Image style={styles.image} source={image} />
       <View style={styles.detailsContainer}>
         <MainText style={styles.title}>{title}</MainText>
-        <MainText style={styles.subTytle}>{price}</MainText>
+        <MainText style={styles.subTitle}>{price}</MainText>
       </View>
     </View>
   );
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 200,
   },
-  subTytle: {
+  subTitle: {
     fontWeight: "bold",
     color: colors.secondary,
   },

@@ -2,7 +2,7 @@ import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 
 import PropTypes from "prop-types";
-import MainText from "../MainTextComponent";
+import MainText from "../MainText";
 import colors from "../../config/colors";
 
 const ListItem = ({ title, subTitle, image }) => {
