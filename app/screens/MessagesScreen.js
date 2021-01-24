@@ -6,7 +6,7 @@ import ItemSeparator from "../components/ItemSeparator";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
 
 const MessagesScreen = () => {
-  const [messages, setMessages] = useState([
+  const initialMessages = [
     {
       id: 1,
       title: "Title #1",
@@ -19,10 +19,25 @@ const MessagesScreen = () => {
       description: "Description #2",
       image: require("../assets/default_user.jpeg"),
     },
-  ]);
+  ];
+  const [messages, setMessages] = useState(initialMessages);
+  const [refreshing, setRefreshing] = useState(false);
+
   const deleteHandler = (message) => {
-    setMessages(messages.filter((m) => message.id !== m.id));
+    setMessages(messages.filter((m) => m.id !== message.id));
   };
+
+  const refreshHandler = () => {
+    setMessages([
+      {
+        id: 1,
+        title: "Title #1",
+        description: "Description #1",
+        image: require("../assets/default_user.jpeg"),
+      },
+    ]);
+  };
+
   return (
     <Screen>
       <FlatList
@@ -40,6 +55,8 @@ const MessagesScreen = () => {
           />
         )}
         ItemSeparatorComponent={ItemSeparator}
+        refreshing={refreshing}
+        onRefresh={refreshHandler}
       />
     </Screen>
   );
