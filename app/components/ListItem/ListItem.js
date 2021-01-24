@@ -4,18 +4,21 @@ import { Image, StyleSheet, TouchableHighlight, View } from "react-native";
 import PropTypes from "prop-types";
 import MainText from "../MainText";
 import colors from "../../config/colors";
+import Swipeable from "react-native-gesture-handler/Swipeable";
 
-const ListItem = ({ title, subTitle, image, onPress }) => {
+const ListItem = ({ title, subTitle, image, onPress, renderRightActions }) => {
   return (
-    <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
-      <View style={styles.container}>
-        <Image style={styles.image} source={image} />
-        <View>
-          <MainText style={styles.title}>{title}</MainText>
-          <MainText style={styles.subTitle}>{subTitle}</MainText>
+    <Swipeable renderRightActions={renderRightActions}>
+      <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
+        <View style={styles.container}>
+          <Image style={styles.image} source={image} />
+          <View>
+            <MainText style={styles.title}>{title}</MainText>
+            <MainText style={styles.subTitle}>{subTitle}</MainText>
+          </View>
         </View>
-      </View>
-    </TouchableHighlight>
+      </TouchableHighlight>
+    </Swipeable>
   );
 };
 
@@ -45,4 +48,5 @@ ListItem.propTypes = {
   subTitle: PropTypes.string,
   image: PropTypes.number,
   onPress: PropTypes.func,
+  renderRightActions: PropTypes.func,
 };
