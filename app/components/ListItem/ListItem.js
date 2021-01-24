@@ -1,19 +1,21 @@
 import React from "react";
-import { Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, TouchableHighlight, View } from "react-native";
 
 import PropTypes from "prop-types";
 import MainText from "../MainText";
 import colors from "../../config/colors";
 
-const ListItem = ({ title, subTitle, image }) => {
+const ListItem = ({ title, subTitle, image, onPress }) => {
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={image} />
-      <View>
-        <MainText style={styles.title}>{title}</MainText>
-        <MainText style={styles.subTitle}>{subTitle}</MainText>
+    <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
+      <View style={styles.container}>
+        <Image style={styles.image} source={image} />
+        <View>
+          <MainText style={styles.title}>{title}</MainText>
+          <MainText style={styles.subTitle}>{subTitle}</MainText>
+        </View>
       </View>
-    </View>
+    </TouchableHighlight>
   );
 };
 
@@ -42,4 +44,5 @@ ListItem.propTypes = {
   title: PropTypes.string,
   subTitle: PropTypes.string,
   image: PropTypes.number,
+  onPress: PropTypes.func,
 };
