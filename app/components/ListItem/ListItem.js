@@ -6,15 +6,25 @@ import MainText from "../MainText";
 import colors from "../../config/colors";
 import Swipeable from "react-native-gesture-handler/Swipeable";
 
-const ListItem = ({ title, subTitle, image, onPress, renderRightActions }) => {
+const ListItem = ({
+  title,
+  subTitle,
+  image,
+  ImageComponent,
+  onPress,
+  renderRightActions,
+}) => {
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
         <View style={styles.container}>
-          <Image style={styles.image} source={image} />
-          <View>
+          {ImageComponent}
+          {image && <Image style={styles.image} source={image} />}
+          <View style={styles.textArea}>
             <MainText style={styles.title}>{title}</MainText>
-            <MainText style={styles.subTitle}>{subTitle}</MainText>
+            {subTitle && (
+              <MainText style={styles.subTitle}>{subTitle}</MainText>
+            )}
           </View>
         </View>
       </TouchableHighlight>
@@ -37,6 +47,10 @@ const styles = StyleSheet.create({
   },
   subTitle: {
     color: colors.medium,
+  },
+  textArea: {
+    marginLeft: 15,
+    justifyContent: "center",
   },
   title: {
     fontWeight: "500",
