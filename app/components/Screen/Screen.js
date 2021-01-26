@@ -4,9 +4,9 @@ import { SafeAreaView, StyleSheet, View } from "react-native";
 import Constants from "expo-constants";
 import PropTypes from "prop-types";
 
-const Screen = ({ children }) => {
+const Screen = ({ children, style }) => {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, style]}>
       <View>{children}</View>
     </SafeAreaView>
   );
@@ -23,4 +23,5 @@ const styles = StyleSheet.create({
 
 Screen.propTypes = {
   children: PropTypes.object,
+  style: PropTypes.object,
 };
