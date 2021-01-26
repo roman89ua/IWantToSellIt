@@ -6,8 +6,8 @@ import PropTypes from "prop-types";
 
 const Screen = ({ children, style }) => {
   return (
-    <SafeAreaView style={[styles.container, style]}>
-      <View>{children}</View>
+    <SafeAreaView style={styles.container}>
+      <View style={style}>{children}</View>
     </SafeAreaView>
   );
 };
