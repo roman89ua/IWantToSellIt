@@ -10,19 +10,17 @@ export const isAndroidOS = Platform.OS === "android";
 
 const AppTextInput = ({ iconName, placeholder }) => {
   return (
-    <Screen>
-      <View style={styles.container}>
-        {iconName && (
-          <MaterialCommunityIcons
-            name={iconName}
-            size={20}
-            color={colors.medium}
-            style={styles.icon}
-          />
-        )}
-        <TextInput style={styles.textInput} placeholder={placeholder} />
-      </View>
-    </Screen>
+    <View style={styles.container}>
+      {iconName && (
+        <MaterialCommunityIcons
+          name={iconName}
+          size={20}
+          color={colors.medium}
+          style={styles.icon}
+        />
+      )}
+      <TextInput style={styles.textInput} placeholder={placeholder} />
+    </View>
   );
 };
 
