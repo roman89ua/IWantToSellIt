@@ -1,12 +1,10 @@
 import React from "react";
-import { Platform, TextInput, StyleSheet, View } from "react-native";
+import { TextInput, StyleSheet, View } from "react-native";
 
 import PropTypes from "prop-types";
 import colors from "../../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import Screen from "../Screen";
-
-export const isAndroidOS = Platform.OS === "android";
+import defaultStyles from "../../config/styles";
 
 const AppTextInput = ({ iconName, placeholder }) => {
   return (
@@ -19,7 +17,7 @@ const AppTextInput = ({ iconName, placeholder }) => {
           style={styles.icon}
         />
       )}
-      <TextInput style={styles.textInput} placeholder={placeholder} />
+      <TextInput style={defaultStyles.text} placeholder={placeholder} />
     </View>
   );
 };
@@ -38,11 +36,6 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 10,
-  },
-  textInput: {
-    fontSize: 18,
-    fontFamily: isAndroidOS ? "Roboto" : "Avenir",
-    color: colors.dark,
   },
 });
 
