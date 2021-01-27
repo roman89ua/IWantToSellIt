@@ -22,6 +22,6 @@ const styles = StyleSheet.create({
 });
 
 Screen.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.any,
   style: PropTypes.object,
 };
