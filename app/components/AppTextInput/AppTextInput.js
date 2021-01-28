@@ -6,7 +6,7 @@ import colors from "../../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import defaultStyles from "../../config/styles";
 
-const AppTextInput = ({ iconName, placeholder }) => {
+const AppTextInput = ({ iconName, placeholder, ...otherProps }) => {
   return (
     <View style={styles.container}>
       {iconName && (
@@ -17,7 +17,11 @@ const AppTextInput = ({ iconName, placeholder }) => {
           style={styles.icon}
         />
       )}
-      <TextInput style={defaultStyles.text} placeholder={placeholder} />
+      <TextInput
+        style={defaultStyles.text}
+        placeholder={placeholder}
+        {...otherProps}
+      />
     </View>
   );
 };
