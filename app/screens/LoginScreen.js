@@ -4,9 +4,8 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 
 import Screen from "../components/Screen";
-import AppTextInput from "../components/AppTextInput";
-import AppButton from "../components/AppButton";
-import ValidationErrorMessage from "../components/ValidationErrorMessage";
+import AppFormField from "../components/AppFormField";
+import SubmitButton from "../components/SubmitButton";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
@@ -22,37 +21,27 @@ const LoginScreen = () => {
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
+        {() => (
           <>
-            <AppTextInput
+            <AppFormField
               autoCapitalize="none"
               autoCorrect={false}
               iconName="email"
+              name="email"
               keybordType="email-address"
-              onBlur={() => setFieldTouched("email")}
-              onChangeText={handleChange("email")}
               placeholder="Email"
               textContentType="emailAddress"
             />
-            <ValidationErrorMessage
-              error={errors.email}
-              visible={touched.email}
-            />
-            <AppTextInput
+            <AppFormField
               autoCapitalize="none"
               autoCorrect={false}
               iconName="lock"
-              onBlur={() => setFieldTouched("password")}
-              onChangeText={handleChange("password")}
+              name="password"
               placeholder="Password"
               secureTextEntry={true}
               textContentType="password"
             />
-            <ValidationErrorMessage
-              error={errors.password}
-              visible={touched.password}
-            />
-            <AppButton title="Login" onPress={handleSubmit} />
+            <SubmitButton title="Login" />
           </>
         )}
       </Formik>
