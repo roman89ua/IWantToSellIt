@@ -2,6 +2,7 @@ export default {
   black: "#000",
   primary: "#fc5c65",
   danger: "#ff5252",
+  error: "#ff0000",
   secondary: "#4ecdc4",
   white: "#fff",
   dark: "#0c0c0c",
