@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import AppButton from "../AppButton";
+import AppButton from "../../AppButton";
 import { useFormikContext } from "formik";
 
 const SubmitButton = ({ title }) => {
