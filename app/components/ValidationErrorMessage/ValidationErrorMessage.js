@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import MainText from "../../MainText";
+import MainText from "../MainText";
 import { PropTypes } from "prop-types";
-import colors from "../../../config/colors";
+import colors from "../../config/colors";
 
 const ValidationErrorMessage = ({ error, visible }) => {
   if (!error || !visible) return null;
@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
 export default ValidationErrorMessage;
 
 ValidationErrorMessage.propTypes = {
-  error: PropTypes.string,
-  visible: PropTypes.bool,
+  error: PropTypes.any,
+  visible: PropTypes.any,
 };

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useFormikContext } from "formik";
 
 import AppTextInput from "../../AppTextInput";
-import ValidationErrorMessage from "../ValidationErrorMessage";
+import ValidationErrorMessage from "../../ValidationErrorMessage";
 
 const AppFormField = ({ name, ...otherProps }) => {
   const { errors, handleChange, setFieldTouched, touched } = useFormikContext();
