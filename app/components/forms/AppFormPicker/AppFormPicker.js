@@ -5,7 +5,7 @@ import AppPicker from "../../AppPicker";
 import PropTypes from "prop-types";
 import ValidationErrorMessage from "../../ValidationErrorMessage";
 
-const AppFormPicker = ({ items, name, placeholder }) => {
+const AppFormPicker = ({ items, name, placeholder, width }) => {
   const { errors, setFieldValue, touched, values } = useFormikContext();
   return (
     <>
@@ -14,6 +14,7 @@ const AppFormPicker = ({ items, name, placeholder }) => {
         onSelectItem={(item) => setFieldValue(name, item)}
         placeholder={placeholder}
         selectedItem={values[name]}
+        width={width}
       />
       <ValidationErrorMessage error={errors[name]} visible={touched[name]} />
     </>

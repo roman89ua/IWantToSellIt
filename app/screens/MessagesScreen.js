@@ -9,14 +9,18 @@ const MessagesScreen = () => {
   const initialMessages = [
     {
       id: 1,
-      title: "Title #1",
-      description: "Description #1",
+      title:
+        "Title #1 asd asdas d asdasd asd gre gr erwfr wfwefernrtnerb ewvew v re ger ger gerg erger gg er g",
+      description:
+        "Lorem sdf dsf dsf kergoir fpwoekfskoreoifnsfm efmw pfkos;lfds;f kmewrlmewoewpoeowfms;ldmf kmew mwefos;lfm s'mew'fmse;'lmfsl'esmfms;'efmslenf",
       image: require("../assets/default_user.jpeg"),
     },
     {
       id: 2,
-      title: "Title #2",
-      description: "Description #2",
+      title:
+        "Title #2 sdf sdf eew rthy yukiuukyjher reerg regdfgwefsdfer re re",
+      description:
+        "Description #2  er reg kiuo t ew rewrewrwebhert we trtyytyjrt",
       image: require("../assets/default_user.jpeg"),
     },
   ];

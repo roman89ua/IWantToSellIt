@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="73ca12bd-33d5-4b60-b584-c977cb4fd11e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/forms/AppFormPicker/AppFormPicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/forms/AppFormPicker/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/screens/ListingEditScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/AppPicker/AppPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppPicker/AppPicker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/AppTextInput/AppTextInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/AppTextInput/AppTextInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Card/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ListItem/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ListItem/ListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/MainText/MainText.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/MainText/MainText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Screen/Screen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Screen/Screen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/forms/AppFormField/AppFormField.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/forms/AppFormField/AppFormField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/forms/ValidationErrorMessage/ValidationErrorMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ValidationErrorMessage/ValidationErrorMessage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/forms/ValidationErrorMessage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ValidationErrorMessage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/forms/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/forms/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/forms/AppFormPicker/AppFormPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/forms/AppFormPicker/AppFormPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/ListingEditScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/ListingEditScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/screens/MessagesScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/screens/MessagesScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +67,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -94,7 +98,8 @@
       <workItem from="1611841994190" duration="11589000" />
       <workItem from="1611861209753" duration="5620000" />
       <workItem from="1612023012612" duration="2078000" />
-      <workItem from="1612172656201" duration="5897000" />
+      <workItem from="1612172656201" duration="6267000" />
+      <workItem from="1612255546748" duration="4836000" />
     </task>
     <task id="LOCAL-00001" summary="reinstall IDE and reset up setings for IDE">
       <created>1611845572344</created>
