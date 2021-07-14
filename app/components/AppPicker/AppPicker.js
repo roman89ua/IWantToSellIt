@@ -18,8 +18,10 @@ import PickerItem from "../PickerItem";
 const AppPicker = ({
   iconName,
   items,
+  numberOfColumns = 1,
   onSelectItem,
   placeholder,
+  PickerItemComponent = PickerItem,
   selectedItem,
   width = "100%",
 }) => {
@@ -61,9 +63,10 @@ const AppPicker = ({
           <FlatList
             data={items}
             keyExtractor={(item) => item.value.toString()}
+            numColumns={numberOfColumns}
             renderItem={({ item }) => (
-              <PickerItem
-                label={item.label}
+              <PickerItemComponent
+                item={item}
                 onPress={() => onPressPickerItemHandler(item)}
               />
             )}
@@ -73,8 +76,6 @@ const AppPicker = ({
     </>
   );
 };
-
-export default AppPicker;
 
 const styles = StyleSheet.create({
   container: {
@@ -96,10 +97,14 @@ const styles = StyleSheet.create({
   text: { flex: 1 },
 });
 
+export default AppPicker;
+
 AppPicker.propTypes = {
   iconName: PropTypes.string,
   items: PropTypes.array,
+  numberOfColumns: PropTypes.number,
   onSelectItem: PropTypes.func,
+  PickerItemComponent: PropTypes.func,
   placeholder: PropTypes.string,
   selectedItem: PropTypes.object,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 
 import MainText from "../MainText";
 
-const PickerItem = ({ label, onPress }) => {
+const PickerItem = ({ item, onPress }) => {
   return (
     <TouchableOpacity onPress={onPress}>
-      <MainText style={styles.text}>{label}</MainText>
+      <MainText style={styles.text}>{item.label}</MainText>
     </TouchableOpacity>
   );
 };
@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
 export default PickerItem;
 
 PickerItem.propTypes = {
-  label: PropTypes.string,
+  item: PropTypes.object,
   onPress: PropTypes.func,
 };

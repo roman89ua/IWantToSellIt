@@ -25,4 +25,5 @@ export default AppFormField;
 AppFormField.propTypes = {
   name: PropTypes.string,
   otherProps: PropTypes.object,
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
